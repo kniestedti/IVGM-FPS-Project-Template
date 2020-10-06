@@ -41,6 +41,7 @@ public class Damageable : MonoBehaviour
 
             // apply the damages
             health.TakeDamage(totalDamage, damageSource);
+            UnityEngine.Debug.Log("Remove health");
         }
     }
 }

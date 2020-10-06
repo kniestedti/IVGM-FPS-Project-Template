@@ -14,6 +14,7 @@ public class Season : MonoBehaviour
 
     public void Start()
     {
+        season = 1;
         adjustSeason();
     }
 

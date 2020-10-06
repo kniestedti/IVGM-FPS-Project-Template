@@ -5,9 +5,6 @@ using UnityEngine;
 public class SeasonPickup : MonoBehaviour
 {
     [Header("Parameters")]
-    [Tooltip("Amount of health to heal on pickup")]
-    public float healAmount;
-
     Pickup m_Pickup;
 
     void Start()
