@@ -77,6 +77,13 @@ public class Health : MonoBehaviour
         if (m_IsDead)
             return;
 
+        Tree tree = transform.GetComponent<Tree>();
+        if (tree)
+        {
+            tree.destroy();
+            return;
+        }
+
         // call OnDie action
         if (currentHealth <= 0f)
         {
