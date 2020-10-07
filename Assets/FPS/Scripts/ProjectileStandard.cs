@@ -180,6 +180,18 @@ public class ProjectileStandard : MonoBehaviour
 
     bool IsHitValid(RaycastHit hit)
     {
+
+        ///////////////////////////////////////////////
+        /// Removes a target and it's link when hit ///
+        ///////////////////////////////////////////////
+        if (hit.collider.CompareTag("TARGET"))
+        {
+            target z = (target) hit.collider.gameObject.GetComponent(typeof(target));
+            Destroy(z.removeable);
+            Destroy(hit.collider.gameObject);
+        }
+        ///////////////////////////////////////////
+        
         // ignore hits with an ignore component
         if(hit.collider.GetComponent<IgnoreHitDetection>())
         {

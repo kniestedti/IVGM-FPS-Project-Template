@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelUserStore">
+    <attachedFolders />
+    <explicitIncludes>
+      <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
+      <Path>Library/PackageCache/com.unity.connect.share@1.2.0-preview.1</Path>
+      <Path>Library/PackageCache/com.unity.editorcoroutines@0.1.0-preview.1</Path>
+      <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
+      <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
+      <Path>Library/PackageCache/com.unity.ide.vscode@1.2.1</Path>
+      <Path>Library/PackageCache/com.unity.learn.iet-framework@0.3.0-preview.5</Path>
+      <Path>Library/PackageCache/com.unity.probuilder@4.2.3</Path>
+      <Path>Library/PackageCache/com.unity.progrids@3.0.3-preview.5</Path>
+      <Path>Library/PackageCache/com.unity.settings-manager@1.0.1</Path>
+      <Path>Library/PackageCache/com.unity.test-framework@1.1.16</Path>
+      <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
+      <Path>Library/PackageCache/com.unity.timeline@1.2.14</Path>
+      <Path>Packages</Path>
+      <Path>ProjectSettings</Path>
+    </explicitIncludes>
+    <explicitExcludes>
+      <Path>.git</Path>
+      <Path>.idea</Path>
+      <Path>Blender_Models</Path>
+      <Path>Library</Path>
+      <Path>Temp</Path>
+      <Path>Tutorial Defaults</Path>
+      <Path>obj</Path>
+    </explicitExcludes>
+  </component>
+</project>
