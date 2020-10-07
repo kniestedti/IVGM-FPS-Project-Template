@@ -11,6 +11,7 @@ public class Season : MonoBehaviour
     public bool isGround = false;
     public bool isSnow = false;
     public bool isVines = false;
+    public bool isTimerRespawner = false;
 
     public void Start()
     {
@@ -42,6 +43,10 @@ public class Season : MonoBehaviour
         if (isVines)
         {
             transform.GetComponent<Vines>().changeSeason(season);
+        }
+        if (isTimerRespawner)
+        {
+            transform.GetComponent<TimerRespawner>().changeSeason(season);
         }
     }
 }

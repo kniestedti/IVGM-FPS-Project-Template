@@ -56,7 +56,6 @@ public class Health : MonoBehaviour
             onDamaged.Invoke(trueDamageAmount, damageSource);
         }
 
-        UnityEngine.Debug.Log(currentHealth );
         HandleDeath();
     }
 
