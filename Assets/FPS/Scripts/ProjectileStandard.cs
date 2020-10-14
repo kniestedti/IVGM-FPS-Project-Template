@@ -215,7 +215,6 @@ public class ProjectileStandard : MonoBehaviour
             Damageable damageable = collider.GetComponent<Damageable>();
             if (damageable)
             {
-                UnityEngine.Debug.Log("Hit Damagable");
                 damageable.InflictDamage(damage, false, m_ProjectileBase.owner);
             }
         }

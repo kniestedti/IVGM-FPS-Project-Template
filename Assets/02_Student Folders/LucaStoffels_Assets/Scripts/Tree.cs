@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
@@ -46,19 +47,21 @@ public class Tree : MonoBehaviour
 
     public void destroy()
     {
+        transform.GetComponent<BoxCollider>().enabled = false;
+
         for (int i = 0; i < childeren.Length; i++)
         {
+            childeren[i].transform.parent = null;
             Rigidbody rb = childeren[i].gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
             rb.mass = 5;
             MeshCollider mc = childeren[i].gameObject.AddComponent(typeof(MeshCollider)) as MeshCollider;
             mc.convex = true;
 
+            rb.velocity = new Vector3((float)UnityEngine.Random.Range(-10,10) / (float)5, (float)UnityEngine.Random.Range(2, 10) / (float)5, (float)UnityEngine.Random.Range(-10, 10) / (float)5);
+
             changeToFadeRendering(childeren[i].GetComponent<Renderer>().material);
         }
         fading = true;
-        transform.GetComponent<BoxCollider>().enabled = false;
-
-
     }
 
     public void changeSeason(int seasonId)
@@ -94,6 +97,10 @@ public class Tree : MonoBehaviour
         fadeTime -= Time.deltaTime;
         if(fadeTime <= 0)
         {
+            for (int i = 0; i < childeren.Length; i++)
+            {
+                Destroy(childeren[i].gameObject);
+            }
             Destroy(gameObject);
         }
     }

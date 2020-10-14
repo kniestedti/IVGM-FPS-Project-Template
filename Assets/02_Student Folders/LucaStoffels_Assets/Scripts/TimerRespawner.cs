@@ -53,7 +53,6 @@ public class TimerRespawner : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        UnityEngine.Debug.Log(other.name);
         if(other.name == "Player")
         {
             respawnTimers();

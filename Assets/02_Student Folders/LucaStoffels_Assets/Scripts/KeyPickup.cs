@@ -24,7 +24,7 @@ public class KeyPickup : MonoBehaviour
             Gate gate = go.GetComponent<Gate>();
             if (gate)
             {
-                gate.openGate();
+                gate.setKeyPickedUp(true);
             }
         }
 
