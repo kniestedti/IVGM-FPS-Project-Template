@@ -190,6 +190,34 @@ public class ProjectileStandard : MonoBehaviour
             Destroy(z.removeable);
             Destroy(hit.collider.gameObject);
         }
+        
+        /////////////////////////////////
+        /// Pillar shooter detection ////
+        /////////////////////////////////
+        if (hit.collider.CompareTag("PILLAR"))
+        {
+            pillarPuzzle p = (pillarPuzzle) hit.collider.gameObject.GetComponent(typeof(pillarPuzzle));
+            p.trigger();
+        }
+        
+        //////////////////////////////////
+        /// Next Stage Waypoint Shoot ////
+        //////////////////////////////////
+        if (hit.collider.CompareTag("END_LEVEL_WP"))
+        {
+            NextLevelTP nextLevelTp = (NextLevelTP) hit.collider.gameObject.GetComponent(typeof(NextLevelTP));
+            nextLevelTp.activate();
+        }
+        
+        //////////////////////
+        /// M3 projectile ////
+        //////////////////////
+        if (hit.collider.CompareTag("M3"))
+        {
+            M3Value value = (M3Value) hit.collider.gameObject.GetComponent(typeof(M3Value));
+            Match3Level m3 = (Match3Level) value.m3Level.GetComponent(typeof(Match3Level));
+            m3.playerSelection(value.value);
+        }
         ///////////////////////////////////////////
         
         // ignore hits with an ignore component

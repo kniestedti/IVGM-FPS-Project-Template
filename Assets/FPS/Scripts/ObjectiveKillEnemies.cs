@@ -21,6 +21,7 @@ public class ObjectiveKillEnemies : MonoBehaviour
 
         m_EnemyManager = FindObjectOfType<EnemyManager>();
         DebugUtility.HandleErrorIfNullFindObject<EnemyManager, ObjectiveKillEnemies>(m_EnemyManager, this);
+
         m_EnemyManager.onRemoveEnemy += OnKillEnemy;
 
         if (mustKillAllEnemies)
