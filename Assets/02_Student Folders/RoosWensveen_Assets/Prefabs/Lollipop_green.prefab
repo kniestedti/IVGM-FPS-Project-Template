@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1649146323713334298}
   - component: {fileID: 1649146323713334293}
   - component: {fileID: 1649146323713334292}
+  - component: {fileID: 7598234983167086575}
+  - component: {fileID: 3063343006615229515}
   m_Layer: 0
   m_Name: candy
   m_TagString: Untagged
@@ -95,6 +97,31 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7598234983167086575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649146323713334294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339da81b4c55d1c48816063ecd78903d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3063343006615229515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649146323713334294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e254f04b4ac1446910180de58db1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parts: {fileID: 442110, guid: 512fc5c070c5e3b4592265be30712a2e, type: 3}
 --- !u!1 &1649146324930459621
 GameObject:
   m_ObjectHideFlags: 0
