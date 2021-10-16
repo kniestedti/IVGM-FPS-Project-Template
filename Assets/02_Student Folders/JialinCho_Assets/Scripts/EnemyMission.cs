@@ -2,34 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class EnemyMission : MonoBehaviour
+public class EnemyMission : MonoBehaviour
 {
-    GameObject[] enemies1 GameObject.FindGameObjectsWithTag("enemiesRoom1");
-    GameObject[] enemies2 GameObject.FindGameObjectsWithTag("enemiesRoom2");
+    List<GameObject> enemies1 = new List<GameObject>();
+    List<GameObject> enemies2 = new List<GameObject>();
 
-    int numberOfEnemies1 = enemies1.Length;
-    int numberOfEnemies2 = enemies2.Length;
+    public AutoOpen doorScript;
 
-    public GameObject objectThatHoldsScript;
-
-    // Start is called before the first frame update
     void Start()
     {
-        doorOpen = objectThatHoldsScript.GetComponent<AutoOpen>();
+        enemies1.AddRange(GameObject.FindGameObjectsWithTag("enemiesRoom1"));
 
+
+        enemies2.AddRange(GameObject.FindGameObjectsWithTag("enemiesRoom2"));
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (numberOfEnemies1 <= 0)
+        Debug.Log(enemies1.Count);
+        for (int i = 0; i < enemies1.Count; i++)
         {
-            doorOpen.enabled = true;
+            if (enemies1[i] == null)
+            {
+                enemies1.Remove(enemies1[i]);
+            }
         }
-        else
+        if (enemies1.Count == 3)
         {
-            doorOpen.enabled = false;
+            doorScript.DoorOpen();
         }
     }
 }
-*/

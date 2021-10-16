@@ -283,7 +283,7 @@ public class PlayerCharacterController : MonoBehaviour
                 if (isGrounded && m_InputHandler.GetJumpInputDown())
                 {
                     // force the crouch state to false
-                    if (SetCrouchingState(false, false))
+                    //if (SetCrouchingState(false, false))
                     {
                         // start by canceling out the vertical component of our velocity
                         characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);

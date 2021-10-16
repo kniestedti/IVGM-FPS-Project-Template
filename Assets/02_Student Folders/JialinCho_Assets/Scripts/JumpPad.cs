@@ -2,16 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class JumpPad : MonoBehaviour
+public class JumpPad : MonoBehaviour
 {
-    [Range(100, 10000)]
+    [Range(10, 10000)]
     public float bounceHeight;
 
-    private void onCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         GameObject bouncer = collision.gameObject;
-        Rigidbody rb = bouncer.GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.up * bounceHeight);
+        Debug.Log(bouncer.name);
+        PlayerCharacterController rb = bouncer.GetComponentInParent<PlayerCharacterController>();
+        if (rb == null)
+        {
+            return; 
+        }
+        Debug.Log(rb.characterVelocity);
+        // rb.characterVelocity+=(Vector3.up * bounceHeight);
+        Vector3 velocity = rb.characterVelocity;
+        velocity.y = bounceHeight;
+        rb.characterVelocity = velocity;
+        Debug.Log(rb.characterVelocity);
     }
+
 }
-*/

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AutoOpen : MonoBehaviour
 {
+    
     int number = 3;
     public float speed = 3f;
     bool isOpen = false;
@@ -12,6 +13,7 @@ public class AutoOpen : MonoBehaviour
     float timer;
     float timerLength = 1f;
 
+    
     Vector3 door1DefaultPos = new Vector3(0, 0, 0);
     Vector3 door2DefaultPos = new Vector3(0, 0, -3);
 
@@ -29,12 +31,15 @@ public class AutoOpen : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void DoorOpen()
     {
-        if(opening && timer > 0f)
+        if (opening && timer > 0f)
         {
-            door1.Translate(Vector3.forward * Time.deltaTime * speed);
-            door2.Translate(-Vector3.forward * Time.deltaTime * speed);
+            Debug.Log(timer);
+            //  door1.Translate(Vector3.forward * Time.deltaTime * speed);
+            //  door2.Translate(-Vector3.forward * Time.deltaTime * speed);
+            door1.gameObject.SetActive(false);
+            door2.gameObject.SetActive(false);
             timer -= Time.deltaTime;
         } else if (opening && timer <= 0f)
         {
@@ -42,20 +47,20 @@ public class AutoOpen : MonoBehaviour
             timer = timerLength;
             closing = true;
         }
-
-        if (closing && timer >0f)
-        {
-            door1.Translate(-Vector3.forward * Time.deltaTime * speed);
-            door2.Translate(Vector3.forward * Time.deltaTime * speed);
-            timer -= Time.deltaTime;
-        } else if (closing && timer <= 0f)
-        {
-            closing = false;
-            timer = timerLength;
-            isOpen = false;
-            door1.localPosition = door1DefaultPos;
-            door2.localPosition = door2DefaultPos;
-        }
+        
+        //if (closing && timer >0f)
+        //{
+        //    door1.Translate(-Vector3.forward * Time.deltaTime * speed);
+        //    door2.Translate(Vector3.forward * Time.deltaTime * speed);
+        //    timer -= Time.deltaTime;
+        //} else if (closing && timer <= 0f)
+        //{
+        //    closing = false;
+        //    timer = timerLength;
+        //    isOpen = false;
+        //    door1.localPosition = door1DefaultPos;
+        //    door2.localPosition = door2DefaultPos;
+        //}
     }
 
     void OnTriggerEnter (Collider other)
