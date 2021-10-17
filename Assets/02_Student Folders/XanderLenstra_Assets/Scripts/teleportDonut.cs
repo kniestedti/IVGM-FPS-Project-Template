@@ -3,39 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class teleportDonut : MonoBehaviour
-{
+public class teleportDonut : MonoBehaviour {
     [Header("Parameters")]
 
-    [Tooltip("Destination object")]
-    public GameObject target;
+    [Tooltip("Should the player be flipped when exiting the portal?")]
+    public bool shouldFlip = false;
 
-    Collider m_Collider;
+    [Tooltip("The other donut that you should exit from")]
+    public GameObject exitDonut;
+
+    private Collider m_Collider;
+    private teleportDonut exitDonutScript;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         m_Collider = GetComponent<Collider>();
         DebugUtility.HandleErrorIfNullGetComponent<Collider, teleportDonut>(m_Collider, this, gameObject);
 
         m_Collider.isTrigger = true;
-        Debug.Log("Starting donut!");
+        exitDonutScript = exitDonut.GetComponent<teleportDonut>();
     }
 
     // Called every frame
-    void Update()
-    {
+    void Update() {
 
     }
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log("Collision trigger");
         PlayerCharacterController enteringPlayer = other.GetComponent<PlayerCharacterController>();
 
-        if (enteringPlayer != null)
-        {
-            Debug.Log("Found a player!");
-            enteringPlayer.transform.position = target.transform.position;
+        if (enteringPlayer != null) {
+            if (shouldFlip) {
+                enteringPlayer.transform.Rotate(Vector3.up, 180f, Space.Self);
+            }
+            enteringPlayer.transform.position = exitDonut.transform.Find("Exit").gameObject.transform.position;
             Physics.SyncTransforms();
         }
     }
