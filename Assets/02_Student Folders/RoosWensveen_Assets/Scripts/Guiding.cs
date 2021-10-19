@@ -6,7 +6,7 @@ public class Guiding : MonoBehaviour
 {
     public Transform player;
     private Rigidbody rb;
-    public bool company = false;
+    bool company = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class Guiding : MonoBehaviour
       if(player.position.x - transform.position.x < 0.5 || company) {
       company = true;
       transform.rotation = Quaternion.Euler(player.rotation.eulerAngles.x, player.rotation.eulerAngles.y, player.rotation.eulerAngles.z);
-      transform.position = new Vector3(player.position.x-5, transform.position.y, player.position.z-5);
+      transform.position = new Vector3(player.position.x-2, transform.position.y, player.position.z-3);
       }
     }
 }

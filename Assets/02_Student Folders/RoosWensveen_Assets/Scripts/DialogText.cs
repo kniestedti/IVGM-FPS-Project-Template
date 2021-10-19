@@ -53,7 +53,8 @@ public void O() {
     // Update is called once per frame
    public void Update()
     {
-        if(Input.anyKeyDown) 
+        //if(Input.anyKeyDown) 
+        if(Input.GetKeyDown(KeyCode.K)) 
         {
           if(textComponent.text == lines[index])
           {
