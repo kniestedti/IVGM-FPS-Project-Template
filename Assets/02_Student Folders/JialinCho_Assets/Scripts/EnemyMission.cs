@@ -13,7 +13,6 @@ public class EnemyMission : MonoBehaviour
     {
         enemies1.AddRange(GameObject.FindGameObjectsWithTag("enemiesRoom1"));
 
-
         enemies2.AddRange(GameObject.FindGameObjectsWithTag("enemiesRoom2"));
     }
 
@@ -30,6 +29,19 @@ public class EnemyMission : MonoBehaviour
         if (enemies1.Count == 3)
         {
             doorScript.DoorOpen();
+        }
+
+        Debug.Log("Enemies type 2: " + enemies2.Count);
+        for (int i = 0; i < enemies2.Count; i++)
+        {
+            if (enemies2[i] == null)
+            {
+                enemies2.Remove(enemies2[i]);
+            }
+        }
+        if (enemies2.Count == 4)
+        {
+            doorScript.JumpPadOpen();
         }
     }
 }

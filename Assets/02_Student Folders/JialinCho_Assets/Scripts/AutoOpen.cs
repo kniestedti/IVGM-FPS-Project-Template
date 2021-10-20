@@ -5,20 +5,22 @@ using UnityEngine;
 public class AutoOpen : MonoBehaviour
 {
     
-    int number = 3;
+   // int number = 3;
     public float speed = 3f;
     bool isOpen = false;
     bool opening = false;
-    bool closing = false;
+   // bool closing = false;
     float timer;
     float timerLength = 1f;
 
     
     Vector3 door1DefaultPos = new Vector3(0, 0, 0);
     Vector3 door2DefaultPos = new Vector3(0, 0, -3);
+    Vector3 JumpPadWall1DefaultPos = new Vector3(-51, 18, -41);
 
     public Transform door1;
     public Transform door2;
+    public Transform JumpPadWall1;
 
     Collider triggerZone;
     public AudioSource soundEffect;
@@ -33,20 +35,18 @@ public class AutoOpen : MonoBehaviour
     // Update is called once per frame
     public void DoorOpen()
     {
-        if (opening && timer > 0f)
+        // if (opening && timer > 0f)
+
+
+        //  door1.Translate(Vector3.forward * Time.deltaTime * speed);
+        //  door2.Translate(-Vector3.forward * Time.deltaTime * speed);
+        if (door1.gameObject.activeSelf == true)
         {
-            Debug.Log(timer);
-            //  door1.Translate(Vector3.forward * Time.deltaTime * speed);
-            //  door2.Translate(-Vector3.forward * Time.deltaTime * speed);
             door1.gameObject.SetActive(false);
             door2.gameObject.SetActive(false);
-            timer -= Time.deltaTime;
-        } else if (opening && timer <= 0f)
-        {
-            opening = false;
-            timer = timerLength;
-            closing = true;
         }
+            //     timer -= Time.deltaTime;
+        
         
         //if (closing && timer >0f)
         //{
@@ -63,7 +63,18 @@ public class AutoOpen : MonoBehaviour
         //}
     }
 
-    void OnTriggerEnter (Collider other)
+    public void JumpPadOpen()
+    {
+        //if (opening && timer > 0f)
+        if (JumpPadWall1.gameObject.activeSelf == true)
+        {
+            JumpPadWall1.gameObject.SetActive(false);
+        }
+         //   timer -= Time.deltaTime;
+        
+    }
+
+        void OnTriggerEnter (Collider other)
     {
         Damageable player = other.GetComponent<Damageable>();
 
