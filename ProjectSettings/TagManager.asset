@@ -9,6 +9,7 @@ TagManager:
   - JumpPad
   - enemiesRoom1
   - enemiesRoom2
+  - Lollipop
   layers:
   - Default
   - TransparentFX
