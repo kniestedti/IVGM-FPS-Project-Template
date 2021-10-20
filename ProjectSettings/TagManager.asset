@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Balloon
+  - 'LOL '
   - JumpPad
   - enemiesRoom1
   - enemiesRoom2
+  - Lollipop
   layers:
   - Default
   - TransparentFX
