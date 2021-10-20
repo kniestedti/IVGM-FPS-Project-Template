@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Balloon
   - 'LOL '
+  - JumpPad
+  - enemiesRoom1
+  - enemiesRoom2
   layers:
   - Default
   - TransparentFX
