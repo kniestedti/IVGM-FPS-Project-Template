@@ -26,7 +26,7 @@ public class EnemyMission : MonoBehaviour
                 enemies1.Remove(enemies1[i]);
             }
         }
-        if (enemies1.Count == 3)
+        if (enemies1.Count == 0)
         {
             doorScript.DoorOpen();
         }
@@ -39,7 +39,7 @@ public class EnemyMission : MonoBehaviour
                 enemies2.Remove(enemies2[i]);
             }
         }
-        if (enemies2.Count == 4)
+        if (enemies2.Count == 0)
         {
             doorScript.JumpPadOpen();
         }
