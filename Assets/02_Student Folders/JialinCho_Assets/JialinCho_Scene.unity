@@ -1087,7 +1087,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
@@ -2410,7 +2413,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
@@ -2817,7 +2823,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
@@ -3655,7 +3664,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
@@ -3911,7 +3923,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   bounceHeight: 18
+=======
+  bounceHeight: 20
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
   bounceHeight: 20
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -4471,7 +4487,11 @@ PrefabInstance:
         type: 3}
       propertyPath: title
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: Find your way out
+=======
+      value: Unlock the next area
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
       value: Unlock the next area
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -4485,7 +4505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: description
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: Defeat all the enemies and find the exit
+=======
+      value: Complete objectives and proceed to the next area
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
       value: Complete objectives and proceed to the next area
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -4858,7 +4882,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
@@ -4948,7 +4975,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
@@ -5548,8 +5578,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_RemovedComponents:
     - {fileID: 124976421866084192, guid: b5d7788a394724177aec8f1ac08ce4a4, type: 3}
+=======
+    m_RemovedComponents: []
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
     m_RemovedComponents: []
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -7111,7 +7145,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
