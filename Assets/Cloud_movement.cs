@@ -1,22 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Cloud_movement : MonoBehaviour
+ 
+public class BalloonScript : MonoBehaviour
 {
-    public Transform target;
-    public float t;
-    public float speed; 
-
+   [Range(-1f, 1f)]
+   public float horizontalSpeed;
+ 
+    [Range(0, 5)]
+    public float verticalSpeed;
+ 
+    [Range(0, 2)]
+    public float amplitude;
+ 
+    public Vector3 originalPos;
+ 
+    public Vector3 tempPosition;
+ 
+ 
+    // Start is called before the first frame update
     void Start()
     {
-        
+        tempPosition = originalPos = transform.position;
+ 
     }
-
+ 
+    // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 a = transform.position;
-        Vector3 b = target.position;
-        transform.position = Vector3.MoveTowards(a, Vector3.Lerp(a, b, t), speed);
+        tempPosition = originalPos;
+        tempPosition.x += horizontalSpeed * Time.fixedDeltaTime;
+        tempPosition.y += Mathf.Sin(Time.realtimeSinceStartup * verticalSpeed) * amplitude;
+        transform.position = tempPosition;
+ 
     }
 }
