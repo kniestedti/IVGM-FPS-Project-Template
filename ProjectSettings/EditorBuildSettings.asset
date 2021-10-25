@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Menu/MainMenuScene.unity
     guid: 0ffac6132adb54714954003a60f4f424
+  - enabled: 1
+    path: Assets/02_Student Folders/RoosWensveen_Assets/RoosWensveen_Scene.unity
+    guid: f53d0fdcdec72694da32f20c689a1220
   m_configObjects: {}

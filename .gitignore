@@ -124,3 +124,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# IDEA folder
+/.idea/
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
