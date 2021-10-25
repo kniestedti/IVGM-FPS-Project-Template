@@ -19,4 +19,4 @@ public class Cloud_movement : MonoBehaviour
         Vector3 b = target.position;
         transform.position = Vector3.MoveTowards(a, Vector3.Lerp(a, b, t), speed);
     }
-}
+    }
