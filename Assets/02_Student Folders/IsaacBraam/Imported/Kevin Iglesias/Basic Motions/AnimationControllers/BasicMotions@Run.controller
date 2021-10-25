@@ -2,6 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1101 &-5549794863325127734
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -56,6 +57,8 @@ AnimatorStateTransition:
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -66,6 +69,7 @@ AnimatorController:
   serializedVersion: 5
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_AnimatorParameters:
   - m_Name: Run
     m_Type: 4
@@ -73,6 +77,9 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+=======
+  m_AnimatorParameters: []
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
   m_AnimatorParameters: []
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -96,7 +103,11 @@ AnimatorController:
 AnimatorState:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   serializedVersion: 6
+=======
+  serializedVersion: 5
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
   serializedVersion: 5
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -112,8 +123,12 @@ AnimatorState:
   m_CycleOffset: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Transitions:
   - {fileID: -4846965398192279323}
+=======
+  m_Transitions: []
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
   m_Transitions: []
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -139,7 +154,11 @@ AnimatorState:
 AnimatorStateMachine:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   serializedVersion: 6
+=======
+  serializedVersion: 5
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
   serializedVersion: 5
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
@@ -157,9 +176,12 @@ AnimatorStateMachine:
     m_Position: {x: 336, y: 12, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - serializedVersion: 1
     m_State: {fileID: 2116931548515696739}
     m_Position: {x: 340, y: 90, z: 0}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
@@ -174,6 +196,7 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 48, y: 48, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102573139479107624}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1102 &2116931548515696739
@@ -203,6 +226,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
