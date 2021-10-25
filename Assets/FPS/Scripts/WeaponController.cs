@@ -6,6 +6,7 @@ public enum WeaponShootType
     Manual,
     Automatic,
     Charge,
+    FlameThrower,
 }
 
 [System.Serializable]
@@ -58,6 +59,8 @@ public class WeaponController : MonoBehaviour
     public float aimZoomRatio = 1f;
     [Tooltip("Translation to apply to weapon arm when aiming with this weapon")]
     public Vector3 aimOffset;
+    [Tooltip("Range of the weapon (only works for FlameThrower)")]
+    public float range = 1f;
 
     [Header("Ammo Parameters")]
     [Tooltip("Amount of ammo reloaded per second")]
@@ -84,6 +87,8 @@ public class WeaponController : MonoBehaviour
     public GameObject muzzleFlashPrefab;
     [Tooltip("Unparent the muzzle flash instance on spawn")]
     public bool unparentMuzzleFlash;
+    [Tooltip("Animation of the flame thrower flame")]
+    public GameObject flame;
     [Tooltip("sound played when shooting")]
     public AudioClip shootSFX;
     [Tooltip("Sound played when changing to this weapon")]
@@ -235,6 +240,10 @@ public class WeaponController : MonoBehaviour
     public void ShowWeapon(bool show)
     {
         weaponRoot.SetActive(show);
+        if (flame != null)
+        {
+            flame.SetActive(false);
+        }
 
         if (show && changeWeaponSFX)
         {
@@ -281,6 +290,18 @@ public class WeaponController : MonoBehaviour
                 }
                 return false;
 
+            case WeaponShootType.FlameThrower:
+                if (inputHeld)
+                {
+                    return TryShoot();
+                }
+                if (inputUp && flame.activeSelf)
+                {
+                    flame.SetActive(false);
+                    return true;
+                }
+                return false;
+
             default:
                 return false;
         }
@@ -288,7 +309,7 @@ public class WeaponController : MonoBehaviour
 
     bool TryShoot()
     {
-        if (m_CurrentAmmo >= 1f 
+        if (m_CurrentAmmo >= 1f
             && m_LastTimeShot + delayBetweenShots < Time.time)
         {
             HandleShoot();
@@ -296,7 +317,9 @@ public class WeaponController : MonoBehaviour
 
             return true;
         }
-
+        if (m_CurrentAmmo < 1f && shootType == WeaponShootType.FlameThrower){
+            flame.SetActive(false);
+        }
         return false;
     }
 
@@ -334,8 +357,29 @@ public class WeaponController : MonoBehaviour
 
     void HandleShoot()
     {
+        if (shootType == WeaponShootType.FlameThrower)
+        {
+            flame.SetActive(true);
+            float offSet = 4f;
+            float coneAngle = 0.75f;
+            Collider[] hits = Physics.OverlapSphere(weaponMuzzle.position, range); //get all colliders within sphere
+            foreach (var hitCollider in hits)
+            {
+                if (hitCollider.GetComponent<Damageable>() && hitCollider.tag != "Player")
+                {
+                    if(Vector3.Dot((hitCollider.transform.position - (weaponMuzzle.position + (-weaponMuzzle.forward * offSet))).normalized, weaponMuzzle.forward) > coneAngle)
+                    {
+                        hitCollider.GetComponent<Damageable>().InflictDamage(2, false, this.owner);
+                    }
+                }
+                else if (hitCollider.GetComponent<ChocolateDamage>())
+                {
+                    hitCollider.GetComponent<ChocolateDamage>().InflictDamage(4);
+                }
+            }
+        }
         int bulletsPerShotFinal = shootType == WeaponShootType.Charge ? Mathf.CeilToInt(currentCharge * bulletsPerShot) : bulletsPerShot;
-        
+
         // spawn all bullets with random direction
         for (int i = 0; i < bulletsPerShotFinal; i++)
         {
