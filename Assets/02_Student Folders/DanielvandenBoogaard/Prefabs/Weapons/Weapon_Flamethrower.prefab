@@ -175,12 +175,15 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 0}
   unparentMuzzleFlash: 0
   flame: {fileID: 7290236536122021612}
-  shootSFX: {fileID: 0}
-  changeWeaponSFX: {fileID: 0}
+  shootSFX: {fileID: 8300000, guid: 4ef3cbd10da1b1b45a78a79e7e1f7753, type: 3}
+  changeWeaponSFX: {fileID: 8300000, guid: 6f3e0904bbbace745bdef08cdbcdfec0, type: 3}
   useContinuousShootSound: 1
-  continuousShootStartSFX: {fileID: 0}
-  continuousShootLoopSFX: {fileID: 0}
-  continuousShootEndSFX: {fileID: 0}
+  continuousShootStartSFX: {fileID: 8300000, guid: bc0741b87834f0a4fbcc8b7cadb10b20,
+    type: 3}
+  continuousShootLoopSFX: {fileID: 8300000, guid: d777f1c03ed47d346956b9cf07a253f2,
+    type: 3}
+  continuousShootEndSFX: {fileID: 8300000, guid: 4ef3cbd10da1b1b45a78a79e7e1f7753,
+    type: 3}
 --- !u!114 &5877542827297338714
 MonoBehaviour:
   m_ObjectHideFlags: 0
