@@ -1,3 +1,8 @@
+Group D
+
+Test help
+
+
 # PROJECT SETUP
 
 In this **ReadMe**, you find instructions for getting started with Assignment 1 of IVGM, as well as necessary steps to prepare your Unity project for submission. Please read the entire document with your group before you get started. To make sure there are no conflicts on Git, we recommend that you do these steps together.

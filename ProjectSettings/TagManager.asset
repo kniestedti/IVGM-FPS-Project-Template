@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Balloon
+  - 'LOL '
+  - JumpPad
+  - enemiesRoom1
+  - enemiesRoom2
+  - Lollipop
+  - Chocolate
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - 
   - FirstPersonWeapon
   - 
-  - 
+  - Enemies
   - 
   - 
   - 
