@@ -28,11 +28,7 @@ public class GingerScript : MonoBehaviour
     {
         
         dist = Vector3.Distance(Player.position, ginger.position);
-<<<<<<< HEAD
         //Debug.Log(dist);
-=======
-        Debug.Log(dist);
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
         if (dist < FollowDistance)
         {
             //very close

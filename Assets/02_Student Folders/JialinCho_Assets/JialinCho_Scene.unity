@@ -1086,10 +1086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-=======
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 --- !u!1001 &339238749
 PrefabInstance:
@@ -2409,10 +2406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-=======
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 --- !u!1 &612933465
 GameObject:
@@ -2816,10 +2810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-=======
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 --- !u!1001 &775876024
 PrefabInstance:
@@ -3654,10 +3645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-=======
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 --- !u!1001 &1020778160
 PrefabInstance:
@@ -3910,11 +3898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6925c092f0ef644b84eaf2acbc942e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   bounceHeight: 18
-=======
-  bounceHeight: 20
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 --- !u!43 &1101164258
 Mesh:
   m_ObjectHideFlags: 0
@@ -4470,11 +4454,7 @@ PrefabInstance:
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
       propertyPath: title
-<<<<<<< HEAD
       value: Find your way out
-=======
-      value: Unlock the next area
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
       objectReference: {fileID: 0}
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
@@ -4484,11 +4464,7 @@ PrefabInstance:
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
       propertyPath: description
-<<<<<<< HEAD
       value: Defeat all the enemies and find the exit
-=======
-      value: Complete objectives and proceed to the next area
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
       objectReference: {fileID: 0}
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
@@ -4857,10 +4833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-=======
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 --- !u!1001 &1317095341
 PrefabInstance:
@@ -4947,10 +4920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-=======
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 --- !u!4 &1317095342 stripped
 Transform:
@@ -5547,12 +5517,8 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     m_RemovedComponents:
     - {fileID: 124976421866084192, guid: b5d7788a394724177aec8f1ac08ce4a4, type: 3}
-=======
-    m_RemovedComponents: []
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: b5d7788a394724177aec8f1ac08ce4a4, type: 3}
 --- !u!1001 &1547823383
 PrefabInstance:
@@ -7110,10 +7076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-<<<<<<< HEAD
     - {fileID: 1732311554562893519, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
-=======
->>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_SourcePrefab: {fileID: 100100000, guid: 6a3f89b95dad64326b4f945ac866dc3e, type: 3}
 --- !u!1001 &1959992180
 PrefabInstance:
