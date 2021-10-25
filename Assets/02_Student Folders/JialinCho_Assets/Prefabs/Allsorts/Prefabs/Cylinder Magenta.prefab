@@ -140,7 +140,10 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 1732311554562893519}
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
@@ -203,6 +206,7 @@ Rigidbody:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -226,6 +230,8 @@ MonoBehaviour:
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
+=======
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -233,6 +239,9 @@ MonoBehaviour:
   m_CollisionDetection: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
+=======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)

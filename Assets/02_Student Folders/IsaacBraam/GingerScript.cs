@@ -31,7 +31,11 @@ public class GingerScript : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Debug.Log(dist);
+=======
+        Debug.Log(dist);
+>>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
 =======
         Debug.Log(dist);
 >>>>>>> parent of 43f5bb8 (Deleted what isn't mine)
