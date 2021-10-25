@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
  
-public class BalloonScript : MonoBehaviour
+public class CloudMovement : MonoBehaviour
 {
    [Range(-1f, 1f)]
    public float horizontalSpeed;
