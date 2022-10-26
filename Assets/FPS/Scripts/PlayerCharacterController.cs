@@ -118,6 +118,10 @@ public class PlayerCharacterController : MonoBehaviour
     const float k_JumpGroundingPreventionTime = 0.2f;
     const float k_GroundCheckDistanceInAir = 0.07f;
 
+    bool IcePhysics = false;
+    float jumpMod = 0.0f;
+    Vector3 prevSpeed = new Vector3(0.0f, 0.0f, 0.0f);
+
     void Start()
     {
         // fetch components on the same gameObject
@@ -233,6 +237,22 @@ public class PlayerCharacterController : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider collidor)
+    {
+        if (collidor.GetComponent<Collider>().name == "Ice")
+        {
+            IcePhysics = true;
+        }
+    }
+
+    void OnTriggerExit(Collider collidor)
+    {
+        if (collidor.GetComponent<Collider>().name == "Ice")
+        {
+            IcePhysics = false;
+        }
+    }
+
     void HandleCharacterMovement()
     {
         // horizontal character rotation
@@ -265,19 +285,65 @@ public class PlayerCharacterController : MonoBehaviour
 
             // converts move input to a worldspace vector based on our character's transform orientation
             Vector3 worldspaceMoveInput = transform.TransformVector(m_InputHandler.GetMoveInput());
+            prevSpeed = prevSpeed * 0.89f;
 
             // handle grounded movement
             if (isGrounded)
             {
-                // calculate the desired velocity from inputs, max speed, and current slope
-                Vector3 targetVelocity = worldspaceMoveInput * maxSpeedOnGround * speedModifier;
-                // reduce speed if crouching by crouch speed ratio
-                if (isCrouching)
-                    targetVelocity *= maxSpeedCrouchedRatio;
-                targetVelocity = GetDirectionReorientedOnSlope(targetVelocity.normalized, m_GroundNormal) * targetVelocity.magnitude;
+                if (IcePhysics)
+                {
+                    float iceSpeed = 1.4f;
+                    jumpMod = 20.0f;
+                    // calculate the desired velocity from inputs, max speed, and current slope
+                    if (prevSpeed.x > maxSpeedOnGround * iceSpeed)
+                    {
+                        prevSpeed.x = maxSpeedOnGround * iceSpeed;
+                    }
+                    else if (prevSpeed.x < -maxSpeedOnGround * iceSpeed)
+                    {
+                        prevSpeed.x = -maxSpeedOnGround * iceSpeed;
+                    }
+                    if (prevSpeed.z > maxSpeedOnGround * iceSpeed)
+                    {
+                        prevSpeed.z = maxSpeedOnGround * iceSpeed;
+                    }
+                    else if (prevSpeed.z < -maxSpeedOnGround * iceSpeed)
+                    {
+                        prevSpeed.z = -maxSpeedOnGround * iceSpeed;
+                    }
+                    Vector3 targetVelocity = (worldspaceMoveInput * maxSpeedOnGround * speedModifier) * 0.05f + prevSpeed * 1.1f;
+                    prevSpeed = targetVelocity;
 
-                // smoothly interpolate between our current velocity and the target velocity based on acceleration speed
-                characterVelocity = Vector3.Lerp(characterVelocity, targetVelocity, movementSharpnessOnGround * Time.deltaTime);
+
+                    // reduce speed if crouching by crouch speed ratio
+                    if (isCrouching)
+                        targetVelocity *= maxSpeedCrouchedRatio;
+                    targetVelocity = GetDirectionReorientedOnSlope(targetVelocity.normalized, m_GroundNormal) *
+                                        targetVelocity.magnitude;
+
+
+                    // smoothly interpolate between our current velocity and the target velocity based on acceleration speed
+                    characterVelocity = Vector3.Lerp(characterVelocity, targetVelocity,
+                        movementSharpnessOnGround * Time.deltaTime);
+                }
+                else
+                {
+                    // calculate the desired velocity from inputs, max speed, and current slope
+                    Vector3 targetVelocity = worldspaceMoveInput * maxSpeedOnGround * speedModifier;
+
+                    jumpMod = 0.0f;
+
+                    prevSpeed = targetVelocity;
+                    // reduce speed if crouching by crouch speed ratio
+                    if (isCrouching)
+                        targetVelocity *= maxSpeedCrouchedRatio;
+                    targetVelocity = GetDirectionReorientedOnSlope(targetVelocity.normalized, m_GroundNormal) *
+                                        targetVelocity.magnitude;
+
+                    // smoothly interpolate between our current velocity and the target velocity based on acceleration speed
+                    characterVelocity = Vector3.Lerp(characterVelocity, targetVelocity,
+                        movementSharpnessOnGround * Time.deltaTime);
+                }
 
                 // jumping
                 if (isGrounded && m_InputHandler.GetJumpInputDown())
@@ -318,17 +384,28 @@ public class PlayerCharacterController : MonoBehaviour
             // handle air movement
             else
             {
+                prevSpeed.y = 0f;
                 // add air acceleration
                 characterVelocity += worldspaceMoveInput * accelerationSpeedInAir * Time.deltaTime;
+
 
                 // limit air speed to a maximum, but only horizontally
                 float verticalVelocity = characterVelocity.y;
                 Vector3 horizontalVelocity = Vector3.ProjectOnPlane(characterVelocity, Vector3.up);
-                horizontalVelocity = Vector3.ClampMagnitude(horizontalVelocity, maxSpeedInAir * speedModifier);
+                prevSpeed = horizontalVelocity;
+
+                horizontalVelocity = Vector3.ClampMagnitude(horizontalVelocity, (jumpMod + maxSpeedInAir) * speedModifier);
+                if (!IcePhysics)
+                {
+                    jumpMod = jumpMod * 0.98f;
+                }
+
                 characterVelocity = horizontalVelocity + (Vector3.up * verticalVelocity);
+
 
                 // apply the gravity to the velocity
                 characterVelocity += Vector3.down * gravityDownForce * Time.deltaTime;
+
             }
         }
 
