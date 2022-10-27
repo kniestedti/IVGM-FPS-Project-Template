@@ -123,6 +123,19 @@ public class PlayerWeaponsManager : MonoBehaviour
             {
                 m_AccumulatedRecoil += Vector3.back * activeWeapon.recoilForce;
                 m_AccumulatedRecoil = Vector3.ClampMagnitude(m_AccumulatedRecoil, maxRecoilDistance);
+
+                // toevoeging Valentijn
+                if(Physics.Raycast(weaponCamera.transform.position, weaponCamera.transform.forward, out RaycastHit hit, 1000, -1, QueryTriggerInteraction.Ignore))
+                {
+                    if(hit.transform.tag == "Valentijn")
+                    {   
+                        if (hit.collider.GetComponentInParent<Health>() != null)
+                        {
+                            MonsterStats enemyStats = hit.transform.GetComponent<MonsterStats>();
+                            enemyStats.TakeDamage(50);
+                        }
+                    }
+                }
             }
         }
 
