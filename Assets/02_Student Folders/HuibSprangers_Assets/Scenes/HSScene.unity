@@ -9266,6 +9266,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4146b6333f683d14390d47c2672bce2f, type: 2}
+    - target: {fileID: 1375028047048472407, guid: 115dbd335d944e049a14c0345b664cf6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2051782210292197917, guid: 115dbd335d944e049a14c0345b664cf6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9286,6 +9291,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4146b6333f683d14390d47c2672bce2f, type: 2}
+    - target: {fileID: 3103227027591840206, guid: 115dbd335d944e049a14c0345b664cf6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3378323507289736994, guid: 115dbd335d944e049a14c0345b664cf6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9316,6 +9326,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 4146b6333f683d14390d47c2672bce2f, type: 2}
+    - target: {fileID: 4225119097665491604, guid: 115dbd335d944e049a14c0345b664cf6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4670988410532500420, guid: 115dbd335d944e049a14c0345b664cf6,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -9425,6 +9440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Room_Altar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939008156347564734, guid: 115dbd335d944e049a14c0345b664cf6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8327135148342121585, guid: 115dbd335d944e049a14c0345b664cf6,
         type: 3}
